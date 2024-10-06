@@ -24,7 +24,7 @@ for (int i = 1; i < 21; i ++)
 int toplam = 0;
 
 
-for (int i = 4; i < 151; i ++)
+for (int i = 1; i < 151; i ++)
 {
     toplam += i;
 }
