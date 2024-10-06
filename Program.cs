@@ -1,4 +1,6 @@
 ﻿//1 -> Konsol ekranına 10 kere "Kendime inanıyorum, ben bu yazılım işini hallederim!" yazdırınız.
+using System.ComponentModel.Design;
+
 for (int i = 1; i < 11; i++) 
 {
     Console.WriteLine("Kendime inanıyorum, ben bu yazılım işini hallederim!");
@@ -33,23 +35,20 @@ Console.WriteLine("50 ile 150 arasındaki sayıların toplamı: " + toplam);
 //5 -> 1 ile 120 arasındaki tek ve çift sayıların toplamlarını ayrı ayrı ekrana yazdırınız.
 
 int ciftToplam = 0;
-
-for (int i = 1; i < 121; i++)
-{
-    if (i % 2 == 0)
-     Console.WriteLine(i);
-    ciftToplam += i;
-}
-
-Console.WriteLine("1 ile 120 arasındaki çift sayıların toplamları: " + ciftToplam);
-
 int tekToplam = 0;
 
 for (int i = 1; i < 121; i++)
 {
-    if (i % 2 != 0)
-        Console.WriteLine(i);
-    tekToplam += i;
+    if (i % 2 == 0) //Eğer sayı çift ise;
+    {
+        ciftToplam += i;
+    }
+    else //Sayı tek ise;
+    {
+        tekToplam += i;
+    }
 }
+   
+Console.WriteLine("1 ile 120 arasındaki çift sayıların toplamları: " + ciftToplam);
 
 Console.WriteLine("1 ile 120 arasındaki tek sayıların toplamları: " + tekToplam);
